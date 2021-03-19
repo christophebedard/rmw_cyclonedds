@@ -29,7 +29,9 @@ jobs:
       uses: ros-tooling/setup-ros@master
     - name: Set up git to see all pull requests
       run: git config --global --add remote.origin.fetch '+refs/pull/*:refs/remotes/origin/pull/*'
-    # - run: pip install git+https://github.com/christophebedard/vcstool.git@windows-detect-posix-paths
+    - run: |
+        pip install --user git+https://github.com/christophebedard/vcstool.git@windows-detect-posix-paths
+        vcs diff --repos --debug
     - name: Build and test ROS
       id: ros_ci
       uses: christophebedard/action-ros-ci@windows-no-fix
