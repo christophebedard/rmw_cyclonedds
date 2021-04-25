@@ -32,6 +32,8 @@ jobs:
     - name: Build and test ROS
       id: ros_ci
       uses: ros-tooling/action-ros-ci@v0.2
+      env:
+        RTI_NC_LICENSE_ACCEPTED: yes
       with:
         package-name: >
           rmw_cyclonedds_cpp
