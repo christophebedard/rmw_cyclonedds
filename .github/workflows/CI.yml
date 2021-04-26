@@ -43,8 +43,11 @@ jobs:
           {
             "build": {
               "packages-skip-regex": [
-                  ".*connext.*",
-                  ".*fastrtps.*"
+                  "rti_connext_dds_cmake_module",
+                  "rmw_connext.*",
+                  "fastrtps_cmake_module",
+                  "rosidl_typesupport_fastrtps.*",
+                  "rmw_fastrtps.*"
               ]
             }
           }
