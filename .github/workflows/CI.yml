@@ -41,5 +41,5 @@ jobs:
           rmw_implementation
         target-ros2-distro: ${{matrix.rosdistro}}
         vcs-repo-file-url: >
-          https://raw.githubusercontent.com/ros2/ros2/${{ matrix.repos_branch }}/ros2.repos
+          https://gist.githubusercontent.com/christophebedard/118d6386ce54a1b72f6a4731792d777b/raw/1c4352a92a0fbcc18cca4b397a83660cbd4fe42d/ros2.repos
           https://raw.githubusercontent.com/${{github.repository}}/${{github.sha}}/.github/resources/local.repos
